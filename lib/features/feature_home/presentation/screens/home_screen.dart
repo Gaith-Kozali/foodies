@@ -5,8 +5,8 @@ import 'cart_screen.dart';
 import 'order_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-   HomeScreen({Key? key}) : super(key: key);
- static const String route = "HomeScreen";
+  HomeScreen({Key? key}) : super(key: key);
+  static const String route = "HomeScreen";
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -16,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentPage = 0;
   List<Widget> bodies = const [
     OrderDetailsScreen(),
-    CartScreen(),
     OrderDetailsScreen(),
+    CartScreen(),
     CartScreen(),
     CartScreen()
   ];

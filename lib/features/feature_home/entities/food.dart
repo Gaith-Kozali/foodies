@@ -12,7 +12,7 @@ class Food {
   String picture;
   String name;
   String description;
-  CaloriesInfo caloriesInfo;
-  Containment containment;
+  List <CaloriesInfo> caloriesInfo;
+ List<Containment> containment;
   String price;
 }

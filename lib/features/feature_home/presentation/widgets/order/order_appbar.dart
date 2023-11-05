@@ -4,22 +4,23 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/external_colors.dart';
 
 class OrderAppBar extends StatelessWidget {
-  const OrderAppBar({Key? key}) : super(key: key);
-
+  OrderAppBar({Key? key, required this.picture}) : super(key: key);
+  String picture;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(height: 390.h, color: ExternalColors.darkYellow),
         Positioned(
-            left: 90,
-            right: 90,
-            top: 91.h,
-            child: SvgPicture.asset(
-              "asset/images/humberger.svg",
-              width: 251.w,
-              height: 228.h,
-            ),),
+          left: 90,
+          right: 90,
+          top: 91.h,
+          child: SvgPicture.asset(
+            picture,
+            width: 251.w,
+            height: 228.h,
+          ),
+        ),
         Positioned(
             top: 44.h,
             left: 16,

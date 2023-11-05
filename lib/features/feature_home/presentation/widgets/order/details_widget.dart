@@ -5,19 +5,17 @@ import '../../../../../core/external_colors.dart';
 import '../../../entities/calories_info.dart';
 
 class DetailsWidget extends StatelessWidget {
-  const DetailsWidget({Key? key}) : super(key: key);
-
+  DetailsWidget({Key? key, required this.caloriesInfo}) : super(key: key);
+  List<CaloriesInfo> caloriesInfo;
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
+    return SizedBox(
       height: 66.h,
       width: 323.w,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          CaloriesInfoWidget(
-              information:
-              CaloriesInfo(title: "Kcal", calories: "338")),
+          CaloriesInfoWidget(information: caloriesInfo.elementAt(0)),
           Container(
             width: 2.w,
             height: 66.h,
@@ -27,9 +25,7 @@ class DetailsWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8)),
             ),
           ),
-          CaloriesInfoWidget(
-              information:
-              CaloriesInfo(title: "Fats", calories: "16")),
+          CaloriesInfoWidget(information: caloriesInfo.elementAt(1)),
           Container(
             width: 2.w,
             height: 66.h,
@@ -39,9 +35,7 @@ class DetailsWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8)),
             ),
           ),
-          CaloriesInfoWidget(
-              information:
-              CaloriesInfo(title: "Proteins", calories: "13")),
+          CaloriesInfoWidget(information: caloriesInfo.elementAt(2)),
           Container(
             width: 2.w,
             height: 66.h,
@@ -51,9 +45,7 @@ class DetailsWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8)),
             ),
           ),
-          CaloriesInfoWidget(
-              information:
-              CaloriesInfo(title: "Carbs", calories: "21")),
+          CaloriesInfoWidget(information: caloriesInfo.elementAt(3)),
         ],
       ),
     );

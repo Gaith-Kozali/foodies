@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/external_colors.dart';
 import '../../../entities/containment.dart';
+import '../../../entities/food.dart';
 import 'containment_widget.dart';
 import 'details_widget.dart';
 
 class OrderBody extends StatelessWidget {
-  const OrderBody({Key? key}) : super(key: key);
-
+   OrderBody({Key? key,required this.food}) : super(key: key);
+Food food;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -28,7 +29,7 @@ class OrderBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              'Grilled Chicken Peri Peri',
+              food.name,
               style: TextStyle(
                 color: const Color(0xFF2D2121),
                 fontSize: 24.sp,
@@ -36,7 +37,7 @@ class OrderBody extends StatelessWidget {
               ),
             ),
             Text(
-              'Savor the satisfying crunch of our juicy chicken patty, topped with shredded lettuce and just the right amount of creamy mayonnaise all served on a perfectly toasted bun.',
+              food.description,
               style: TextStyle(
                 color: const Color(0xA5201A1A),
                 fontSize: 14.sp,
@@ -44,27 +45,15 @@ class OrderBody extends StatelessWidget {
                 height: 1.3,
               ),
             ),
-            const DetailsWidget(),
+             DetailsWidget(caloriesInfo: food.caloriesInfo),
             ContainmentWidget(
-              containment: [
-                Containment(
-                    name: "onion", picture: "asset/containment/onion.svg"),
-                Containment(
-                    name: "Tomato", picture: "asset/containment/tomato.svg"),
-                Containment(
-                    name: "chicken",
-                    picture: "asset/containment/chicken.svg"),
-                Containment(
-                    name: "lettuce", picture: "asset/containment/lettuce.svg"),
-                Containment(
-                    name: "sauce", picture: "asset/containment/sauce.svg")
-              ],
+              containment: food.containment,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '\$12.99',
+                  food.price,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 24.sp,
