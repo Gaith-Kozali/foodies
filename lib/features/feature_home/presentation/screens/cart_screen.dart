@@ -11,8 +11,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        physics: const NeverScrollableScrollPhysics(),
+      body: SafeArea(child: SingleChildScrollView(
         child: Column(children: [
           const CartAppBar(),
           SizedBox(
@@ -39,7 +38,7 @@ class CartScreen extends StatelessWidget {
             height: 20.h,
           )
         ]),
-      ),
+      )),
     );
   }
 }

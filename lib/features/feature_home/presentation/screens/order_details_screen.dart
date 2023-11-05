@@ -33,7 +33,7 @@ class OrderDetailsScreen extends StatelessWidget {
         ],
         price: '\$12.99');
     return Scaffold(
-      body: Stack(
+      body: SafeArea(child: Stack(
         children: [
           Container(
             color: Colors.white,
@@ -45,7 +45,7 @@ class OrderDetailsScreen extends StatelessWidget {
           ),
           OrderBody(food: food)
         ],
-      ),
+      )),
     );
   }
 }

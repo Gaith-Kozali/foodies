@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodies/core/external_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../../feature_home/presentation/screens/home_screen.dart';
-import '../widgets/or_widget.dart';
-import '../widgets/other_signup.dart';
+import '../widgets/sign_up/or_widget.dart';
+import '../widgets/sign_up/other_signup.dart';
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({Key? key}) : super(key: key);
   static const String route = "SignUpScreen";
-  GlobalKey<FormState> key = GlobalKey<FormState>();
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body:SafeArea(child:  SingleChildScrollView(
         child: Center(
             child: ConstrainedBox(
                 constraints: BoxConstraints(
@@ -30,7 +29,6 @@ class SignUpScreen extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     Form(
-                        key: key,
                         child: SizedBox(
                           width: 389.w,
                           child: Column(
@@ -46,15 +44,14 @@ class SignUpScreen extends StatelessWidget {
                               ),
                               Padding(
                                   padding:
-                                      const EdgeInsets.only(bottom: 22, top: 9)
-                                          .h,
+                                  const EdgeInsets.only(bottom: 22, top: 9)
+                                      .h,
                                   child: SizedBox(
                                     height: 48,
-                                    child: Center(
-                                        child: TextFormField(
+                                    child:  TextFormField(
                                             decoration: const InputDecoration(
                                                 border: OutlineInputBorder(),
-                                                hintText: "****@gmail.com"))),
+                                                hintText: "****@gmail.com")),
                                   )),
                               const Text(
                                 'Password',
@@ -66,7 +63,7 @@ class SignUpScreen extends StatelessWidget {
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.only(bottom: 22, top: 9).h,
+                                const EdgeInsets.only(bottom: 22, top: 9).h,
                                 child: SizedBox(
                                   height: 48,
                                   child: TextFormField(
@@ -86,8 +83,8 @@ class SignUpScreen extends StatelessWidget {
                               ),
                               Padding(
                                   padding:
-                                      const EdgeInsets.only(bottom: 22, top: 9)
-                                          .h,
+                                  const EdgeInsets.only(bottom: 22, top: 9)
+                                      .h,
                                   child: SizedBox(
                                     height: 48,
                                     child: TextFormField(
@@ -106,14 +103,14 @@ class SignUpScreen extends StatelessWidget {
                                   },
                                   style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              ExternalColors.yellow)),
+                                      MaterialStateProperty.all<Color>(
+                                          ExternalColors.yellow)),
                                   child: const Text("signUp"),
                                 ),
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.symmetric(vertical: 22).h,
+                                const EdgeInsets.symmetric(vertical: 22).h,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -148,7 +145,7 @@ class SignUpScreen extends StatelessWidget {
                         ))
                   ],
                 ))),
-      ),
+      )),
     );
   }
 }
