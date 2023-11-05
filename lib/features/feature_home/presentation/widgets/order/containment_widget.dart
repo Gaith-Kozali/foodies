@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../entities/containment.dart';
+import '../../../entities/containment.dart';
 
 class ContainmentWidget extends StatelessWidget {
   ContainmentWidget({Key? key, required this.containment}) : super(key: key);
@@ -47,7 +47,7 @@ class ContainmentWidget extends StatelessWidget {
                         ),
                       ),
                       child: SvgPicture.asset(
-                        "asset/containment/onion.svg",
+                        containment[index].picture,
                       ),
                     ),
                     Text(

@@ -3,10 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodies/core/external_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../feature_home/presentation/screens/home_screen.dart';
+import '../widgets/or_widget.dart';
 import '../widgets/other_signup.dart';
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({Key? key}) : super(key: key);
+  static const String route = "SignUpScreen";
   GlobalKey<FormState> key = GlobalKey<FormState>();
 
   @override
@@ -47,11 +50,11 @@ class SignUpScreen extends StatelessWidget {
                                           .h,
                                   child: SizedBox(
                                     height: 48,
-                                    child: Center(child: TextFormField(
-                                        decoration: const InputDecoration(
-                                            border: OutlineInputBorder(),
-                                            hintText: "****@gmail.com")
-                                    )),
+                                    child: Center(
+                                        child: TextFormField(
+                                            decoration: const InputDecoration(
+                                                border: OutlineInputBorder(),
+                                                hintText: "****@gmail.com"))),
                                   )),
                               const Text(
                                 'Password',
@@ -97,7 +100,10 @@ class SignUpScreen extends StatelessWidget {
                                 width: 389.w,
                                 height: 48,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .pushReplacementNamed(HomeScreen.route);
+                                  },
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
@@ -132,35 +138,11 @@ class SignUpScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SizedBox(
-                                      width: 179.w,
-                                      child: const Divider(
-                                        color: Color(0XFF7E8B9E),
-                                      )),
-                                  Text(
-                                    'OR',
-                                    style: TextStyle(
-                                      color: const Color(0xFF7D8B9E),
-                                      fontSize: 11.1.sp,
-                                      fontWeight: FontWeight.w500,
-                                      height: 0.16.h,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                      width: 179.w,
-                                      child: const Divider(
-                                        color: Color(0XFF7E8B9E),
-                                      )),
-                                ],
-                              ),
+                              const OrWidget(),
                               SizedBox(
                                 height: 13.h,
                               ),
-                              OtherSignUp()
+                              const OtherSignUp()
                             ],
                           ),
                         ))

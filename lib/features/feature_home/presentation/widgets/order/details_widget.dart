@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodies/features/feature_home/presentation/widgets/calories_info_widget.dart';
-import '../../../../core/external_colors.dart';
-import '../../entities/calories_info.dart';
+import 'package:foodies/features/feature_home/presentation/widgets/order/calories_info_widget.dart';
+import '../../../../../core/external_colors.dart';
+import '../../../entities/calories_info.dart';
 
 class DetailsWidget extends StatelessWidget {
   const DetailsWidget({Key? key}) : super(key: key);

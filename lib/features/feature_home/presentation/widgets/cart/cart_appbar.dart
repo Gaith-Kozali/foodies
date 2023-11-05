@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/external_colors.dart';
+import '../../../../../core/external_colors.dart';
 
 class CartAppBar extends StatelessWidget {
   const CartAppBar({Key? key}) : super(key: key);

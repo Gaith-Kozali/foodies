@@ -3,4 +3,7 @@ part of 'cart_item_bloc.dart';
 @immutable
 abstract class CartItemState {}
 
-class CartItemInitial extends CartItemState {}
+class AddItemState extends CartItemState {
+  AddItemState(this.num);
+  int num;
+}

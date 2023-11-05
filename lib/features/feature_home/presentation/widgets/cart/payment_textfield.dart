@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/external_colors.dart';
+import '../../../../../core/external_colors.dart';
 
 class PaymentTextField extends StatelessWidget {
   const PaymentTextField({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/external_colors.dart';
-import '../../entities/containment.dart';
+import '../../../../../core/external_colors.dart';
+import '../../../entities/containment.dart';
 import 'containment_widget.dart';
 import 'details_widget.dart';
 
