@@ -1,16 +1,13 @@
 # foodies
 
-A new Flutter project.
+Simple ui for foods app :
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![Screenshot_20231119_131048](https://github.com/Gaith-Kozali/foodies/assets/142360873/dfe11603-23d0-4af6-938b-f61e499be58a)
+![Screenshot_20231119_131057](https://github.com/Gaith-Kozali/foodies/assets/142360873/93cf3779-9159-4abb-b592-609c2091c4af)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+![Screenshot_20231119_131107](https://github.com/Gaith-Kozali/foodies/assets/142360873/0c7571ea-2a29-4f6f-aec2-a44e636d7786)
